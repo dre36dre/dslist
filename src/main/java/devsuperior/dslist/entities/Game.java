@@ -8,6 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.websocket.Decoder.Text;
 
 @Entity
 @Table(name = "tb_game")
@@ -22,7 +23,9 @@ public class Game {
 	private String platform;
 	private Double score;
 	private String imgUrl;
+	@Column(columnDefinition = "TEXT")
 	private String shorDescription;
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
 	public Game() {
